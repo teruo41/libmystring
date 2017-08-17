@@ -58,5 +58,8 @@ char* strtok(char *str, const char* delim) {
   }
   
   _buffer = b;
-  return ret;
+  if (ret[0] == '\0')
+    return NULL;
+  else
+    return ret;
 }

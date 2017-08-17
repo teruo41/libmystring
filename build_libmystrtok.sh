@@ -1,10 +1,10 @@
 #!/bin/bash
 
-echo "Building libmystrtok"
+echo "Building libmystring"
 
-echo -n "Compiling mystrtok.c ..."
+echo -n "Compiling mystring.c ..."
 
-gcc-4.4 -O2 -c mystrtok.c -o mystrtok.o
+gcc-4.4 -O2 -c mystring.c -o mystring.o
 
 if [ $? != 0 ]
 then
@@ -15,7 +15,7 @@ else
 fi
 
 echo -n "Creating library..."
-ar rcs libmystrtok.a mystrtok.o
+ar rcs libmystring.a mystring.o
 
 if [ $? != 0 ]
 then
